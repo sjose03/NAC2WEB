@@ -18,7 +18,7 @@ public class EmailService {
     @Autowired
     private EmailRepository emailRepository;
 
-//    @Autowired
+    @Autowired
     private JavaMailSender javaMailSender;
 
 
@@ -45,6 +45,10 @@ public class EmailService {
 
     public List<EmailModel> getAllEmails(){
         return emailRepository.findAll();
+    }
+
+    public EmailModel getEmailById(String id){
+        return  emailRepository.findByEmailId(id);
     }
 
 }

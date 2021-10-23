@@ -21,4 +21,7 @@ public class EmailDto {
 
     @NotBlank
     private String text;
+
+    private String subject;
+    private String emailId;
 }
